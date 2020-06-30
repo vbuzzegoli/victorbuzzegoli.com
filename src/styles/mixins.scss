@@ -1,0 +1,112 @@
+@import './vars.scss';
+
+@mixin hideScrollbar {
+  scrollbar-width: none;
+  /*For Firefox*/
+  -ms-overflow-style: none;
+  /*For IE and Edge*/
+  &::-webkit-scrollbar {
+      width: 0px;
+      /*For Chrome, Safari and Opera*/
+  }
+}
+
+@mixin onMobile {
+  @media only screen and (max-width: $mobile-breakpoint) {
+      @content;
+  }
+}
+
+@mixin onTablet {
+  @media only screen and (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+      @content;
+  }
+}
+
+@mixin onDesktop {
+  @media only screen and (min-width: $tablet-breakpoint) {
+      @content;
+  }
+}
+
+@mixin onDesktopAndTablet {
+  @media only screen and (min-width: $mobile-breakpoint) {
+      @content;
+  }
+}
+
+@mixin under($width) {
+  @media only screen and (max-width: $width) {
+      @content;
+  }
+}
+
+@mixin over($width) {
+  @media only screen and (min-width: $width) {
+      @content;
+  }
+}
+
+@mixin txt-xl { 
+  font-size: var(--font-size-xl) !important;
+  font-weight: normal !important;
+}
+@mixin txt-lg { 
+  font-size: var(--font-size-lg) !important;
+  font-weight: normal !important;
+}
+@mixin txt-md { 
+  font-size: var(--font-size-md) !important;
+  font-weight: normal !important;
+}
+@mixin txt-sm { 
+  font-size: var(--font-size-sm) !important;
+  font-weight: normal !important;
+}
+@mixin txt-xs { 
+  font-size: var(--font-size-xs) !important;
+  font-weight: normal !important;
+}
+
+@mixin txt-xl--bold { 
+  font-size: var(--font-size-xl) !important;
+  font-weight: bold !important;
+}
+@mixin txt-lg--bold { 
+  font-size: var(--font-size-lg) !important;
+  font-weight: bold !important;
+}
+@mixin txt-md--bold { 
+  font-size: var(--font-size-md) !important;
+  font-weight: bold !important;
+}
+@mixin txt-sm--bold { 
+  font-size: var(--font-size-sm) !important;
+  font-weight: bold !important;
+}
+@mixin txt-xs--bold { 
+  font-size: var(--font-size-xs) !important;
+  font-weight: bold !important;
+}
+
+@mixin spacing-xxxl {
+  margin-top: 3rem;
+}
+@mixin spacing-xxl {
+  margin-top: 1.5rem;
+}
+@mixin spacing-xl {
+  margin-top: .5rem;
+}
+@mixin spacing-lg {
+  margin-top: .4rem;
+}
+@mixin spacing-md {
+  margin-top: .3rem;
+}
+@mixin spacing-sm {
+  margin-top: .2rem;
+}
+@mixin spacing-xs {
+  margin-top: .1rem;
+}

@@ -1,34 +1,21 @@
-# vbuzzegoli-website
+# victorbuzzegoli.com
 
-## Project setup
-```
-yarn install
-```
+This repository holds the source code for my personal website, accessible at [victorbuzzegoli.com](https://victorbuzzegoli.com).
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+## Install dependencies
+
+```bash
+npm install
 ```
 
-### Compiles and minifies for production
+## Start application
+
+```bash
+npm run start
 ```
+
+### Build for production
+
+```bash
 yarn build
 ```
-
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Run your end-to-end tests
-```
-yarn test:e2e
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

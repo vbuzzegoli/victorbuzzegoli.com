@@ -3,16 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start": "npm run serve",
+    "serve": "npm run svg && vue-cli-service serve",
+    "build": "npm run svg && vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "svg": "vsvg -s ./src/assets/svg -t ./src/assets/compiled-svg"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^7.15.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-svgicon": "^3.2.6",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -32,6 +36,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "favicons-webpack-plugin": "^2.1.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
