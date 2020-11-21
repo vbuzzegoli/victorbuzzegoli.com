@@ -119,6 +119,7 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    min-height: fit-content; // safari
   }
 
   .post {
@@ -272,5 +273,6 @@ export default {
 
   .button-load-more {
     width: 100%;
+    min-height: fit-content; // safari
   }
 </style>
