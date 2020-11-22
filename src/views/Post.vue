@@ -155,11 +155,13 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    min-height: fit-content; // safari
   }
 
   .post-tag-wrapper {
     display: flex;
     flex-direction: row;
+    min-height: fit-content; // safari
 
     .post-tag {
       padding: .3rem .7rem;
@@ -169,6 +171,7 @@ export default {
       // background-color: var(--primary-color);
       // color: var(--background-color);
       margin-right: .4rem;
+      min-height: fit-content; // safari
     }
 
     @include onMobile {
@@ -192,6 +195,7 @@ export default {
     -moz-box-shadow: var(--shadow);
     width: 100%;
     height: 25rem;
+    min-height: fit-content; // safari
     @include onTablet {
       height: 15rem;
     }
