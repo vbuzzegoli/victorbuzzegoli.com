@@ -5,7 +5,7 @@ import 'firebase/firestore'
 export default {
   initialize () {
     try {
-      const configuration = require('../../../certs/serviceAccountKey.json')
+      const configuration = require('../../../__private__/vbz.com/certs/serviceAccountKey.json') // not hosted
       firebase.initializeApp(configuration)
       firebase.analytics()
     } catch (err) {

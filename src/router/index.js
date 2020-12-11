@@ -56,13 +56,19 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  // update page title
   document.title = to.meta.title ? `VBZ - ${to.meta.title}` : 'VBZ'
+
   store.dispatch('clearServiceLayerErrors')
   next()
 })
 
 router.afterEach((to, from) => {
-  document.querySelector('#app>.main').scrollTop = 0
+  const main = document.querySelector('#app>.main')
+  if (main && main.scrollTop) {
+    // scroll back to the top
+    main.scrollTop = 0
+  }
 })
 
 export default router
