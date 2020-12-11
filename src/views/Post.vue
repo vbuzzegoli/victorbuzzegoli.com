@@ -302,5 +302,4 @@ export default {
       background-color: rgba(var(--background-color-rgb), .1);
     }
   }
-
 </style>
