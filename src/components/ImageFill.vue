@@ -41,6 +41,6 @@ export default {
     overflow: hidden;
     background-size: cover;
     background-position: center;
-    background-image: url(''); // set dynamically
+    // background-image: url(''); // set dynamically
   }
 </style>

@@ -33,6 +33,15 @@
         class="menu-icon"
         @click="redirectTo(icon.link)"
       />
+
+      <svgicon
+        key="mode-selector"
+        name="mode"
+        width="20"
+        height="20"
+        class="menu-icon--mode"
+        @click="toggleDarkMode"
+      />
     </div>
   </div>
 </template>
@@ -41,6 +50,7 @@
 import '@/assets/compiled-svg/twitter'
 import '@/assets/compiled-svg/github'
 import '@/assets/compiled-svg/linkedin'
+import '@/assets/compiled-svg/mode'
 import Hamburger from '@/components/Hamburger.vue'
 
 export default {
@@ -51,6 +61,7 @@ export default {
   data () {
     return {
       openMenu: false,
+      darkMode: false,
       links: [
         {
           path: '/',
@@ -90,6 +101,10 @@ export default {
     },
     toggleMenu (state) {
       this.openMenu = typeof state === 'boolean' ? state : !this.openMenu
+    },
+    toggleDarkMode () {
+      this.darkMode = !this.darkMode
+      document.body.className = this.darkMode ? 'dark-mode' : ''
     }
   }
 }

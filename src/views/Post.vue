@@ -297,4 +297,10 @@ export default {
     }
   }
 
+  .dark-mode {
+    .post-tag {
+      background-color: rgba(var(--background-color-rgb), .1);
+    }
+  }
+
 </style>

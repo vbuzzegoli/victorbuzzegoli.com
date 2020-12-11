@@ -334,6 +334,12 @@ button {
     &:last-of-type {
       margin-bottom: 3rem;
     }
+
+    &--mode {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      transition: all .3s ease-in-out;
+    }
   }
 }
 
@@ -379,4 +385,14 @@ button {
 .slide-enter, .slide-leave-to {
   opacity: 0;
   transform : scale(.9) translate(0, 2rem);
+}
+
+.dark-mode {
+  input, textarea {
+    background-color: rgba(var(--background-color-rgb), .05);
+  }
+
+  .menu-icon--mode {
+    transform : rotate(180deg);
+  }
 }

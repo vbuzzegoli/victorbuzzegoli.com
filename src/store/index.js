@@ -44,6 +44,9 @@ const actions = {
     }
   },
 
+  /**
+   * Clears the errors cached in the store
+   */
   clearServiceLayerErrors ({ commit }) {
     commit(types.SET_SERVICE_LAYER_ERROR, null)
   }
